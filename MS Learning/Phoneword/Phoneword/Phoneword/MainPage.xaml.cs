@@ -16,6 +16,18 @@ namespace Phoneword
         public MainPage()
         {
             InitializeComponent();
+
+            var layout = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical
+            };
+
+            layout.Children.Add(new Label { Text = "Enter name" });
+            layout.Children.Add(new Entry());
+            layout.Children.Add(new Button { Text = "OK" });
+
+            this.Content = layout;
+            
         }
     }
 }
